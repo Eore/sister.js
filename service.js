@@ -1,5 +1,10 @@
 let cacheName = "sister";
-let assets = ["app.js", "home.html"];
+let assets = [
+  "app/database.js",
+  "app/connection.js",
+  "app/app.js",
+  "home.html"
+];
 
 self.addEventListener("install", event => {
   event.waitUntil(
@@ -12,7 +17,7 @@ self.addEventListener("install", event => {
 
 self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request).then(res => (res ? res : fetch(event.request)))
+    fetch(event.request).catch(() => caches.match(event.request))
   );
 });
 
