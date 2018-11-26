@@ -39,6 +39,10 @@ start();
 
 //html bind
 
+let inputData = () => {
+  let id = document.getElementById();
+};
+
 let showData = () => {
   let showDataTable = document.getElementById("show-data");
   getData(mainDB).then(data => {
