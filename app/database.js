@@ -23,7 +23,7 @@ let addToTemp = ({ method, data }) => {
 };
 
 let addData = data => {
-  if (!navigator.onLine || !connectToServer(wsURL)) {
+  if (!connectToServer(wsURL)) {
     addToTemp({ method: "add", data });
   }
   txDB(mainDB).add(data);

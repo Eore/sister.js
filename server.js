@@ -1,6 +1,4 @@
 let ws = require("ws");
-let listClient = [];
-
 let wsServer = new ws.Server({ port: 4444 });
 
 wsServer.on("connection", socket => {

@@ -3,7 +3,7 @@ let assets = [
   "app/database.js",
   "app/connection.js",
   "app/app.js",
-  "home.html"
+  "index.html"
 ];
 
 self.addEventListener("install", event => {
